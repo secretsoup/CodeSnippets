@@ -20,3 +20,7 @@ for ($i = 1; $i -le 40; $i++) {
   $backendPort = 5000 + $i
   $slb | Add-AzLoadBalancerRuleConfig -Name $name -FrontendIPConfiguration $slb.FrontendIpConfigurations[2] -Protocol "Tcp" -FrontendPort $frontendPort -BackendPort $backendPort -EnableFloatingIP -BackendAddressPool $backendPool -Probe $healthProbe
  }
+
+# This applies the changes above
+
+$slb | Set-AzLoadBalancer 
