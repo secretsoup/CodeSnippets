@@ -9,7 +9,7 @@ data "azurerm_client_config" "current" {
 }
 
 locals {
-  resource_group_id = "/subscriptions/${data.azurerm_client_config.current.subscription_id}/resourceGroups/nonprod-use-aro-compliance-rg-clusterprofile"
+  resource_group_id = "/subscriptions/${data.azurerm_client_config.current.subscription_id}/resourceGroups/resource-group-name-here" # Change the resource group name to where it's being deployed.
 }
 
 data "azurerm_resource_group" "resource_group" {
