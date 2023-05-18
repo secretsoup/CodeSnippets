@@ -1,0 +1,31 @@
+## This is a sample TFVARs file for deployment
+
+cluster_name = ""
+location = ""
+resource_gorup_name = ""
+domain = "" # Specifies domain prefix of cluster
+pull_secret = "" # Specifies pull secret from cloud.redhat.com. The JSON should be provided as a string.
+worker_subnet_name = "" 
+master_subnet_name = ""
+master_subnet_address_space = ""
+worker_subnet_id = ""
+master_subnet_id = ""
+worker_node_vm_size = ""
+master_node_vm_size = ""
+worker_profile_name = ""
+worker_node_vm_disk_size = ""
+worker_node_count = ""
+pod_cidr = ""
+service_cidr = ""
+api_server_visibility = "" # Specifies the API Server visibility for the Azure Red Hat OpenShift cluster. Can be `public` or `private`.
+ingress_profile_name = ""
+ingress_visibility = "" # Can be `public` or `private`
+fips_validated_modules = "" # Can be `Enabled` or `Disabled`
+master_encryption_at_host = "" # Can be `Enabled` or `Disabled`
+worker_encryption_at_host = "" # Can be `Enabled` or `Disabled`
+aro_cluster_aad_sp_client_id = "" # Specifies the client id of the service principal of the Azure Red Hat OpenShift cluster.
+aro_cluster_aad_sp_client_secret = "" # Specifies the client secret of the service principal of the Azure Red Hat OpenShift cluster.
+aro_cluster_aad_sp_object_id = "" # Specifies the object id of the service principal of the Azure Red Hat OpenShift cluster.
+aro_rp_aad_sp_object_id = "" # Specifies the object id of the service principal of the ARO resource provider.
+virtual_network_id = "" # Specifies the id of the virtual network hosting the Azure Red Hat OpenShift cluster.
+deploy = "" # Enter `true` to deploy cluster and `false` to skip deployment of cluster. The AzAPI provider is not state aware so any changes to other modules linked with this one will cause a re-deploy of the cluster. Set to false after initial deployment unless you want to redeploy. 
